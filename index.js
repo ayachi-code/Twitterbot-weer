@@ -3,13 +3,12 @@ const fetch = require('fetch').fetchUrl;
 const configuratie = require('./autho/authenticatie.js');
 const T = new Twitter_bot(configuratie);
 const stream_event = T.stream("user");
-let stad = "Londen";
+let url = "http://api.openweathermap.org/data/2.5/weather?q=amsterdam&APPID=78501d5ae347b04883a0f207550d255d&units=metric";
 
-fetch("http://api.openweathermap.org/data/2.5/weather?q="+stad + "&APPID=78501d5ae347b04883a0f207550d255d&units=metric",(error,info,response) => {
+fetch(url,(error,info,response) => {
     let begin1 = response.toString()
     let response_json_formaat = JSON.parse(begin1);
-    console.log(response_json_formaat)
-
+   
     let data = {
         graden: response_json_formaat.main.temp,
         naam: response_json_formaat.name
@@ -26,7 +25,9 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q="+stad + "&APPID=78501d5
                 text: data.text
             }
             let naar_wie_reageren = data.in_reply_to_screen_name;
-            console.log(gegevens_over_gebruiker.naam)
+            if (naar_wie_reageren == "weer_tweet") {
+                
+            }
     });
 
     function tweethet () {
