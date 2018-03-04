@@ -10,11 +10,12 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=amsterdam&APPID=78501d5a
         graden: response_json_formaat.main.temp,
         naam: response_json_formaat.name
     }
+    let random_getal = Math.floor(Math.random() * 10)
 
     setInterval(tweethet,1000*20)
 
     function tweethet () {
-        T.post('statuses/update',{status: "Het is in " + data.naam + " " + data.graden + " Graden celcius "},(err) => {
+        T.post('statuses/update',{status: "Het is in " + data.naam + " " + data.graden + " Graden celcius " + "Speciale indentieke nummer: " + random_getal},(err) => {
             if (err) {
                 console.log("Hmm er is een error... " + err)
             } else {
