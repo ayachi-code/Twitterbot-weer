@@ -1,5 +1,5 @@
 const Twitter_bot = require('twit');
-const fetch = require('whatwg-fetch');
+const fetch = require('fetch').fetchUrl;
 
 var configuratie = require('./autho/authenticatie.js');
 
