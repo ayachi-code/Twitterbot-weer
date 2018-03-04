@@ -15,6 +15,11 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=amsterdam&APPID=78501d5a
 
     setInterval(tweethet,1000*20)
 
+
+    stream_event.on("tweet",(data) => {
+
+    });
+
     function tweethet () {
         T.post('statuses/update',{status: "Het is in " + data.naam + " " + data.graden + " Graden celcius " + "Speciale indentieke nummer: " + random_getal},(err) => {
             if (err) {
