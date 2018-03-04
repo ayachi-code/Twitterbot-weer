@@ -30,6 +30,14 @@ fetch(url,(error,info,response) => {
             }
     });
 
+    function tweethetnu (text) {
+            T.post("statuses/update",{status: text},(err) => {
+                if (err) {
+                    console.log(err)
+                }
+            })
+    }
+
     function tweethet () {
         T.post('statuses/update',{status: "Het is in " + data.naam + " " + data.graden + " Graden celcius " + "Speciale indentieke nummer: " + random_getal},(err) => {
             if (err) {
