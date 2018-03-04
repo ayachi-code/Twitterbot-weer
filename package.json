@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ayachi-code/Twitterbot-weer/issues"
   },
-  "homepage": "https://github.com/ayachi-code/Twitterbot-weer#readme"
+  "homepage": "https://github.com/ayachi-code/Twitterbot-weer#readme",
+  "dependencies": {
+    "twit": "^2.2.9"
+  }
 }
