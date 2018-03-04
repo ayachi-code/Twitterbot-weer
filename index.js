@@ -36,7 +36,7 @@ fetch(url,(error,info,response) => {
             }
             let naar_wie_reageren = data.in_reply_to_screen_name;
             if (naar_wie_reageren == "weer_tweet") {
-                tweethetnu("@" + gegevens_over_gebruiker.naam + " hey");
+                tweethetnu("@" + gegevens_over_gebruiker.naam + "Het is in " + data.naam + " " + data.graden + " Graden celcius " + "Speciale indentieke nummer: " + random_getal);
             }
     });
 
