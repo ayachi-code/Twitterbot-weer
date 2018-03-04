@@ -17,7 +17,7 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=amsterdam&APPID=78501d5a
         } else {
             console.log("yay")
         }
-    }
+    })
 
 });
 
