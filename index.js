@@ -11,5 +11,13 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=amsterdam&APPID=78501d5a
         naam: response_json_formaat.name
     }
 
+    T.post('statuses/update',{status: "Het is in " + data.naam + data.graden + "Graden celcius"},(err) => {
+        if (err) {
+            console.log("Hmm er is een error... " + err)
+        } else {
+            console.log("yay")
+        }
+    }
+
 });
 
