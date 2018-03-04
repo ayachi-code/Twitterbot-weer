@@ -9,7 +9,7 @@ fetch(url,(error,info,response) => {
     let begin1 = response.toString()
     let response_json_formaat = JSON.parse(begin1);
    
-    let data = {
+    let data2 = {
         graden: response_json_formaat.main.temp,
         naam: response_json_formaat.name
     }
@@ -36,13 +36,13 @@ fetch(url,(error,info,response) => {
             }
             let naar_wie_reageren = data.in_reply_to_screen_name;
             if (naar_wie_reageren == "weer_tweet") {
-                tweethetnu("@" + gegevens_over_gebruiker.naam + "Het is in " + data.naam + " " + data.graden + " Graden celcius " + "Speciale indentieke nummer: " + random_getal);
+                tweethetnu("@" + gegevens_over_gebruiker.naam + " " + "Het is in " + data.naam + " " + data.graden + " Graden celcius " + "Speciale indentieke nummer: " + random_getal);
             }
     });
 
 
     function tweethet () {
-        T.post('statuses/update',{status: "Het is in " + data.naam + " " + data.graden + " Graden celcius " + "Speciale indentieke nummer: " + random_getal},(err) => {
+        T.post('statuses/update',{status: "Het is in " + data2.naam + " " + data2.graden + " Graden celcius " + "Speciale indentieke nummer: " + random_getal},(err) => {
             if (err) {
                 console.log("Hmm er is een error... " + err)
             } else {
