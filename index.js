@@ -13,11 +13,16 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=amsterdam&APPID=78501d5a
     }
     let random_getal = Math.floor(Math.random() * 10)
 
-    setInterval(tweethet,1000*20)
+    setInterval(tweethet,1000*60*2)
 
 
     stream_event.on("tweet",(data) => {
+
+            let gegevens_over_gebruiker = {
+                naam: data.user.screen_name
+            }
             let naar_wie_reageren = data.in_reply_to_screen_name;
+            console.log(gegevens_over_gebruiker.naam)
     });
 
     function tweethet () {
