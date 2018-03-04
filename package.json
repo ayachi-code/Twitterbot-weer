@@ -1,0 +1,19 @@
+{
+  "name": "twitterbot_weer",
+  "version": "1.0.0",
+  "description": "twitter bot weer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayachi-code/Twitterbot-weer.git"
+  },
+  "author": "Bilal el Ayachi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ayachi-code/Twitterbot-weer/issues"
+  },
+  "homepage": "https://github.com/ayachi-code/Twitterbot-weer#readme"
+}
