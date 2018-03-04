@@ -2,6 +2,7 @@ const Twitter_bot = require('twit');
 const fetch = require('fetch').fetchUrl;
 const configuratie = require('./autho/authenticatie.js');
 const T = new Twitter_bot(configuratie);
+const stream_event = T.stream("user");
 
 fetch("http://api.openweathermap.org/data/2.5/weather?q=amsterdam&APPID=78501d5ae347b04883a0f207550d255d&units=metric",(error,info,response) => {
     let begin1 = response.toString()
