@@ -7,8 +7,9 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=amsterdam&APPID=78501d5a
     let begin1 = response.toString()
     let response_json_formaat = JSON.parse(begin1);
     let data = {
-        graden: response_json_formaat.main.temp
+        graden: response_json_formaat.main.temp,
+        naam: response_json_formaat.name
     }
-    
+
 });
 
