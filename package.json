@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ayachi-code/Twitterbot-weer#readme",
   "dependencies": {
-    "twit": "^2.2.9"
+    "twit": "^2.2.9",
+    "whatwg-fetch": "^2.0.3"
   }
 }
