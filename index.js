@@ -17,7 +17,7 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=amsterdam&APPID=78501d5a
 
 
     stream_event.on("tweet",(data) => {
-
+            let naar_wie_reageren = data.in_reply_to_screen_name;
     });
 
     function tweethet () {
